@@ -7,7 +7,7 @@ async function handler(req, res) {
 
         // const { title, image, address, description } = data;
         console.log("POST: ", data);                                        
-        const client = await MongoClient.connect('mongodb+srv://admin:admin@cluster0.r4yex.mongodb.net/emailyDB?retryWrites=true&w=majority');
+        const client = await MongoClient.connect('mongodb+srv://user:pass@cluster0.r4yex.mongodb.net/emailyDB?retryWrites=true&w=majority');
         const db = client.db();
 
         const meetupsCollection = db.collection('meetups');

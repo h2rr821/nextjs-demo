@@ -41,7 +41,7 @@ function HomePage(props) {
 // execute pre-rendering process 
 export async function getStaticProps() {
     // fetch data from API                                       
-    const client = await MongoClient.connect('mongodb+srv://admin:admin@cluster0.r4yex.mongodb.net/emailyDB?retryWrites=true&w=majority');
+    const client = await MongoClient.connect('mongodb+srv://user:pass@cluster0.r4yex.mongodb.net/emailyDB?retryWrites=true&w=majority');
     const db = client.db();
     const meetupsCollection = db.collection('meetups');
     const meetups = await meetupsCollection.find().toArray();
